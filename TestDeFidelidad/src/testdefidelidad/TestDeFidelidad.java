@@ -70,7 +70,7 @@ public class TestDeFidelidad {
         System.out.println("10. Se confunde y te dice que ha estado en sitios donde no ha ido contigo?");
         infiel = teclado.nextLine();
         if(infiel.toLowerCase().equals("v")){
-            contador = contador + 5;
+            contador = contador + 3;
         }
         System.out.println();
         System.out.println("Deacuerdo con tus respuestas, se ha concluido que: ");
@@ -83,6 +83,13 @@ public class TestDeFidelidad {
          * Puntaje entre 22 y 30
          *      Imprimir Tu pareja tiene todos los ingredientes para estar viviendo un romance con otra persona. Te aconsejamos que indagues un poco más y averigues que es lo que esta pasando por su cabeza 
          */
+        if(contador >= 0 && contador <=10){
+            System.out.println("¡Felicidades! tu pareja parece ser totalmente fiel");
+        }else if(contador >=11 && contador <=21){
+            System.out.println("Quizás exista el peligro de que haya otra persona en su vida o su mente, aunque seguramente será algo sin importancia");
+        }else{
+            System.out.println("Tu pareja tiene todos los ingredientes para estar viviendo un romance con otra persona. Te aconsejamos que indagues un poco más y averigues que es lo que esta pasando por su cabeza");
+        }
 
     }
     
