@@ -12,10 +12,9 @@ public class Encontrarnumero {
      */
     public static void main(String[] args) {
         int num1, num2, num3;
-<<<<<<< HEAD
+
         boolean resultado = false;
-=======
->>>>>>> origin/main
+
         Scanner teclado = new Scanner(System.in);
         System.out.println("Ingresa un numero: ");
         num1 = teclado.nextInt();
@@ -25,7 +24,7 @@ public class Encontrarnumero {
         num3 = teclado.nextInt();
         for (int i = num1; i <= num2; i++) {
             if(i == num3){
-<<<<<<< HEAD
+
                 resultado = true;
                 break;
             }else{
@@ -33,15 +32,7 @@ public class Encontrarnumero {
             }  
         }
         System.out.println(resultado);
-=======
-                System.out.println("verdadero");
-                break;
-            }
-            
-        }
->>>>>>> origin/main
     }
-    
-    
-    
+            
 }
+    
