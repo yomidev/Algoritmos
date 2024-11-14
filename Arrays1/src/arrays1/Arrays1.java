@@ -33,8 +33,12 @@ public class Arrays1 {
         System.out.println(Arrays.toString(blackpink));
 
         //TODO Figura Irregular
-        int lados [] = new int[5];
+        int nlados;
         Scanner teclado = new Scanner(System.in);
+        System.out.println("Escribe el numero de lados de tu figura: ");
+        nlados = teclado.nextInt();
+        int lados [] = new int[nlados];
+        
         for(int i = 0; i<lados.length;i++){
             System.out.println("Ingresa el valor del lado "+ (i+1)+":");
             lados[i] = teclado.nextInt();
@@ -42,8 +46,24 @@ public class Arrays1 {
         System.out.println(Arrays.toString(lados));
 
         //TODO Calcular Perimetro de la figura Irregular
+        int perimetro = 0;
+        for (int i = 0; i < lados.length; i++) {
+            perimetro = perimetro + lados[i];
+        }
+        System.out.println("El perimetro de la figura es: " + perimetro);
+
         //TODO Figura Regular
-        //TODO Calcular Perimetro y Area de la Figura Regular
+        int nlados2;
+        System.out.println("Ingresa el numero de lados de tu figura: ");
+        nlados2 = teclado.nextInt();
+        int [] Fregular = new int [nlados2];
+        for (int i = 0; i < Fregular.length; i++) {
+            System.out.println("Lado " + (i+1) + ":");
+            Fregular[i] = teclado.nextInt();
+        }
+        //TODO Calcular Perimetro
+        System.out.println(Fregular[0]*Fregular.length);
+
         //Arrays para trabajar
         String [] anime;
         anime = new String[10];
