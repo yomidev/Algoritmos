@@ -32,7 +32,7 @@ public class Arrays1 {
         blackpink[3] = "ROSÉ";
         System.out.println(Arrays.toString(blackpink));
 
-        //TODO Figura Irregular
+        /*TODO Figura Irregular
         int nlados;
         Scanner teclado = new Scanner(System.in);
         System.out.println("Escribe el numero de lados de tu figura: ");
@@ -50,9 +50,9 @@ public class Arrays1 {
         for (int i = 0; i < lados.length; i++) {
             perimetro = perimetro + lados[i];
         }
-        System.out.println("El perimetro de la figura es: " + perimetro);
+        System.out.println("El perimetro de la figura es: " + perimetro);*/
 
-        //TODO Figura Regular
+        /*TODO Figura Regular
         int nlados2;
         System.out.println("Ingresa el numero de lados de tu figura: ");
         nlados2 = teclado.nextInt();
@@ -62,8 +62,8 @@ public class Arrays1 {
             Fregular[i] = teclado.nextInt();
         }
         //TODO Calcular Perimetro
-        System.out.println(Fregular[0]*Fregular.length);
-
+        System.out.println(Fregular[0]*Fregular.length);*/
+        Scanner teclado = new Scanner(System.in);
         //Arrays para trabajar
         String [] anime;
         anime = new String[10];
@@ -71,6 +71,49 @@ public class Arrays1 {
                 "TOMORROW x TOGETHER", "ENHYPEN", "BTS", " ", "SEVENTEEN", " ", " ", "REDVELVET",
                 " ","LE SSERAFIM"
         };
+        String otro;
+        for (int i = 0; i < kpop.length; i++) {
+            String grupoActual = kpop[i];
+            if(grupoActual.equals(" ")){
+                System.out.println("Ingresa otro grupo: ");
+                otro = teclado.nextLine();
+                kpop[i] = otro;
+            }
+        }
+        System.out.println(Arrays.toString(kpop));
+
+        String integrante;
+        String cancion;
+        for (int i = 0; i < kpop.length; i++) {
+            System.out.println("Ingresa un integrante de " + kpop[i] + ": ");
+            integrante = teclado.nextLine();
+            System.out.println("Ingresa una canción de "+kpop[i]+": ");
+            cancion = teclado.nextLine();
+            kpop[i] = kpop[i].concat(" - ").concat(integrante);
+            kpop[i] = kpop[i].concat(" - ").concat(cancion);
+        }
+        System.out.println(Arrays.toString(kpop));
+
+        System.out.println("Ingresa el valor a buscar: ");
+        String buscar = teclado.nextLine().toUpperCase();
+        boolean found = false;
+        for (int i = 0; i < kpop.length; i++) {
+            if(kpop[i].contains(buscar)){
+                System.out.println("Informacion: " + kpop[i]);
+                found = true;
+                break;
+            }else{
+                System.out.println("No encontre nada");
+                found = false;
+                break;
+            }
+        }
+
+
+
+
+
+
         String[] songs;
 
         String [] actores = { "Timothée Chalamet", "Florence Pugh", "Margot Robin",
