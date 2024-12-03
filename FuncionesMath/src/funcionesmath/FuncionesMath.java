@@ -4,6 +4,9 @@
  */
 package funcionesmath;
 
+import java.time.LocalDate;
+import java.util.Scanner;
+
 /**
  *
  * @author Yomi
@@ -35,6 +38,34 @@ public class FuncionesMath {
         System.out.println("Reemplazar:" + cadena.replace(',','-'));
         System.out.println("Mayusculas: "+ cadena.toUpperCase());
         System.out.println("Igual: "+ cadena.equals("hola"));
+
+        //Invertir cadena
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingresa una palabra: ");
+        String palabra = teclado.nextLine();
+        palabra = palabra.replaceAll(" ", "").trim();
+        String invertida = "";
+        for(int i = palabra.length()-1; i>=0;i--){
+            invertida = invertida+palabra.charAt(i);
+        }
+        System.out.println("Palabra Invertida: " + invertida);
+        //Fechas
+        LocalDate fechaActual = LocalDate.now();
+        System.out.println("Fecha actual: "+ fechaActual);
+        //Sumar dias
+        LocalDate sumarDias = fechaActual.plusDays(10);
+        //Sumar meses
+        LocalDate sumarMeses = fechaActual.plusMonths(5);
+        //Sumar Años
+        LocalDate sumarYears = fechaActual.plusYears(1);
+        System.out.println("Sumar Dias: " + sumarDias);
+        System.out.println("Sumar Meses: "+sumarMeses);
+        System.out.println("Sumar Años: "+ sumarYears);
+        //Manipular fechas
+        LocalDate fechaActualizada = fechaActual.minusMonths(3).plusDays(6).minusYears(4);
+        System.out.println("Fecha Actualizada: "+fechaActualizada);
+        //Obtener dia de la semana
+        System.out.println("El dia de la semana en la fecha: "+ fechaActual +" es: "+ fechaActual.getDayOfWeek());
     }
     
 }
